@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nosso Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    .contador {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Minha Minhoca, nós estamos juntos há:</h1>
+  <div class="contador" id="contador"></div>
+
+  <script>
+    const dataInicio = new Date("2024-09-17T22:07:20"); // coloque a data de início aqui
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("contador").innerText =
+        `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+
+      setTimeout(atualizarContador, 1000);
+    }
+
+    atualizarContador();
+  </script>
+</body>
+</html>
