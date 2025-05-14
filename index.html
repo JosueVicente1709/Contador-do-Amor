@@ -3,45 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <title>Nosso Amor</title>
+
+  <!-- Importando fontes românticas do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Parisienne&family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+
   <style>
-  body {
-    font-family: 'Tahoma',sans-serif;
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px;
-    margin: 0;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
 
-  h1 {
-    color: #ffcbdb;
-  }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
 
-  .contador {
-  font-size: 2em;
-  margin-top: 20px;
-  color: #ff7aa3; 
-  font-weight: bold;
-  font-family: 'Tahoma', monospace;
-  }
+    .contador {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: #8a2be2;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-</style>
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
   <h1>Minha Minhoca, nós estamos juntos há:</h1>
   <div class="contador" id="contador"></div>
 
+  <!-- Imagem do casal ou do momento especial -->
   <img src="nosso-dia.jpg" alt="Nosso Dia Juntos" />
 
   <script>
-    const dataInicio = new Date("2024-09-17T22:07:20"); // coloque a data de início aqui
+    const dataInicio = new Date("2024-09-17T22:07:20"); // sua data aqui
 
     function atualizarContador() {
       const agora = new Date();
